@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <title>Yüzde Kaç Yazılımcısın?</title>
+</head>
+<body>
+
+  <section id="header">
+    <div class="bg-white text-center py-4">
+      <div class="container">
+        <h2 class="text-danger display-4 my-4">Yüzde Kaç Yazılımcısın Anketi</h2>
+      </div>
+    </div>
+  </section>
+
+  <div class="result d-none py-4 bg-white text-center">
+    <div class="container lead">
+      <p><span class="text-danger display-4 p-3">0%</span>Yazılımcısın</p>
+      <p id="successMessage" class="d-none text-danger">Sen bu işin ehli olmuşsun! 👑</p>
+      <p id="successMessage1" class="d-none text-danger">Neredeyse tam bir yazılımcısın!</p>
+      <p id="successMessage2" class="d-none text-danger">Yolun yarısı, devam et!</p>
+      <p id="successMessage3" class="d-none text-danger">Bir yerlerden başlamışsın, güzel!</p>
+      <p id="successMessage4" class="d-none text-danger">Yazılımcılık bu değil dostum 😅</p>
+    </div>
+  </div>
+
+  <section id="questions">
+    <div class="bg-secondary py-3">
+      <div class="container">
+        <form class="question-form text-white">
+
+          <!-- Soru 1 -->
+          <div class="my-4">
+            <p>1. Stack Overflow çözümlerini projene direkt yapıştırmadan önce ne yaparsın?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" value="E" />
+              <label class="form-check-label">Kodun ne yaptığını tamamen analiz ederim</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" value="H" />
+              <label class="form-check-label">Ufak testlerle anlamaya çalışırım</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" value="H" />
+              <label class="form-check-label">ChatGPT’ye sorarım</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q1" value="H" />
+              <label class="form-check-label">Zaman yoksa yapıştır geç</label>
+            </div>
+          </div>
+
+          <!-- Soru 2 -->
+          <div class="my-4">
+            <p>2. Projen çalışıyor ama kod kalabalık. Ne yaparsın?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q2" value="E" />
+              <label class="form-check-label">Refactor zamanı!</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q2" value="H" />
+              <label class="form-check-label">"Çalışıyorsa dokunma" prensibine sadığım</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q2" value="H" />
+              <label class="form-check-label">Başkası bakmayacaksa sorun yok</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q2" value="H" />
+              <label class="form-check-label">Temiz kod önemli, ama sonra bakarım</label>
+            </div>
+          </div>
+
+          <!-- Soru 3 -->
+          <div class="my-4">
+            <p>3. Versiyon kontrol sistemi (Git) ile ilişkini nasıl tanımlarsın?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q3" value="E" />
+              <label class="form-check-label">Her özelliğe ayrı branch, sık commit</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q3" value="H" />
+              <label class="form-check-label">Ana branch’e direkt push ama commit mesajları düzenli</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q3" value="H" />
+              <label class="form-check-label">Commit mesajlarım "final_final_2" gibi</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q3" value="H" />
+              <label class="form-check-label">Git’i hâlâ tam çözemedim</label>
+            </div>
+          </div>
+
+          <!-- Soru 4 -->
+          <div class="my-4">
+            <p>4. Dokümantasyon yazmak hakkında ne düşünüyorsun?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q4" value="E" />
+              <label class="form-check-label">Geliştirmenin ayrılmaz parçası</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q4" value="H" />
+              <label class="form-check-label">Zorunluysa yazarım</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q4" value="H" />
+              <label class="form-check-label">Kodu okuyup anlasınlar</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="q4" value="H" />
+              <label class="form-check-label">Daha önemli işlerim var abi</label>
+            </div>
+          </div>
+
+          <!-- Gönder Butonu -->
+          <div class="text-center">
+            <button class="btn btn-light">Gönder</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
